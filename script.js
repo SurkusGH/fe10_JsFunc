@@ -144,5 +144,24 @@ arrCountTwos(numbers);
 console.log(numbers.some((num) => num === 2))
 console.log(numbers.every((num) => num === 2))
 
+const names = budgets.map((person) => person.name);
+const monies = budgets.map((person) => person.budget);
 
+let isThereNegativeInt = monies.some(int => int < 0)
+console.log(isThereNegativeInt)
 
+function bellowHundred(array){
+    if(array.every(int => int >= 100)){
+        console.log("All array members are >100")
+    }
+    else{
+        let bellowHundo = array.filter(num => num < 100)
+        console.log(bellowHundo)
+    }
+}
+let onlyHundos = [100, 100, 100, 100]
+let oneHundo = [2, 100, 3, 99]
+
+bellowHundred(monies);
+bellowHundred(onlyHundos);
+bellowHundred(oneHundo);
